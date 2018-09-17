@@ -1,2 +1,2 @@
 # c-source
-My c program source codes that I wrote for learing purposes
+My c program source codes that I wrote for learning purposes
