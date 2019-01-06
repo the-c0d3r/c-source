@@ -108,10 +108,12 @@ void Database_set(struct Connection *conn, int id, const char *name, const char 
     addr->set = 1;
     // FIXME: bug in how to break it
     char *res = strncpy(addr->name, name, MAX_DATA);
+    addr->name[MAX_DATA - 1] = '\0';
     if (!res)
         die("Name copy failed");
 
     res = strncpy(addr->email, email, MAX_DATA);
+    addr->email[MAX_DATA - 1] = '\0';
     if (!res)
         die("Email copy failed");
 }
